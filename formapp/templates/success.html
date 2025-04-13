@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Success{% endblock %}
+
+{% block content %}
+<div class="success-message">
+    <h2>Thank You for Your Application!</h2>
+    <p>Your application has been submitted successfully. We will get back to you soon.</p>
+    <a href="{% url 'employment_form' %}" class="btn">Back to Form</a>
+</div>
+{% endblock %}

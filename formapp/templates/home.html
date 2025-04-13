@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Employment Portal{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <h2>Welcome to the Employment Portal</h2>
+    <p>Click below to apply for a job.</p>
+    <a href="{% url 'employment_form' %}" class="btn">Apply Now</a>
+</div>
+{% endblock %}
