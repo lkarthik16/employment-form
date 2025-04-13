@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Employment Application{% endblock %}
+
+{% block content %}
+<h2>Employment Application Form</h2>
+<form method="post" enctype="multipart/form-data" style="display: flex; flex-direction: column;">
+    {% csrf_token %}
+
+    <label for="first_name">First Name</label>
+    {{ form.first_name }}
+
+    <label for="last_name">Last Name</label>
+    {{ form.last_name }}
+
+    <label for="email">Email</label>
+    {{ form.email }}
+
+    <label for="phone">Phone</label>
+    {{ form.phone }}
+
+    <label for="city">City</label>
+    {{ form.city }}
+
+    <label for="state">State</label>
+    {{ form.state }}
+
+    <label for="position">Position</label>
+    {{ form.position }}
+
+    <label for="resume">Resume (PDF)</label>
+    {{ form.resume }}
+
+    <button type="submit" style="margin-top: 15px; padding: 10px; background: #008cba; color: white; border: none; cursor: pointer; border-radius: 5px;">
+        Submit
+    </button>
+</form>
+{% endblock %}
